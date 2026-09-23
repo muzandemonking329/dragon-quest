@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dragon Quest</title>
+</head>
+
+<body>
+  <h1>🐉 Dragon Quest</h1>
+  <p>Welcome, Dragon Rider!</p>
+
+  <button onclick="dragonAttack()">🔥 Dragon Attack</button>
+
+  <p id="message">A wild monster appeared!</p>
+
+  <script>
+    function dragonAttack() {
+      document.getElementById("message").textContent =
+        "🔥 Your dragon used Dragon Fire!";
+    }
+  </script>
+</body>
+</html>
