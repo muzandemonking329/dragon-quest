@@ -1,0 +1,89 @@
+/* =========================
+   BASIC PAGE
+   ========================= */
+
+body {
+  font-family: Arial, sans-serif;
+  background: #101522;
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+
+/* =========================
+   GAME HEADER
+   ========================= */
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: #1d2940;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 40px;
+  margin: 0;
+}
+
+header p {
+  font-size: 18px;
+}
+
+
+/* =========================
+   GAME SECTIONS
+   ========================= */
+
+section {
+  background: #1d2940;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 700px;
+  border-radius: 15px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+button {
+  padding: 12px 18px;
+  margin: 5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   GAME MESSAGE
+   ========================= */
+
+#battle-message,
+#exploration-message,
+#game-message {
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+
+/* =========================
+   INVENTORY
+   ========================= */
+
+#inventory {
+  padding-left: 20px;
+}
