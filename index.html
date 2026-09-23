@@ -20,3 +20,44 @@
   </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dragon Quest</title>
+</head>
+
+<body>
+  <h1>🐉 Dragon Quest</h1>
+  <p>Welcome, Dragon Rider!</p>
+
+  <h2>🐉 Your Dragon</h2>
+  <p>❤️ HP: <span id="dragonHP">100</span></p>
+
+  <h2>👹 Wild Monster</h2>
+  <p>❤️ HP: <span id="monsterHP">100</span></p>
+
+  <button onclick="dragonAttack()">🔥 Dragon Attack</button>
+
+  <p id="message">A wild monster appeared!</p>
+
+  <script>
+    let dragonHP = 100;
+    let monsterHP = 100;
+
+    function dragonAttack() {
+      monsterHP -= 20;
+
+      if (monsterHP <= 0) {
+        monsterHP = 0;
+        document.getElementById("message").textContent =
+          "🎉 You defeated the monster!";
+      } else {
+        document.getElementById("message").textContent =
+          "🔥 Your dragon attacked for 20 damage!";
+      }
+
+      document.getElementById("monsterHP").textContent = monsterHP;
+    }
+  </script>
+</body>
+</html>
