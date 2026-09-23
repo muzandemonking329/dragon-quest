@@ -1,63 +1,200 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
   <title>Dragon Quest</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <h1>🐉 Dragon Quest</h1>
-  <p>Welcome, Dragon Rider!</p>
 
-  <button onclick="dragonAttack()">🔥 Dragon Attack</button>
+  <!-- =========================
+       GAME TITLE
+       ========================= -->
 
-  <p id="message">A wild monster appeared!</p>
+  <header>
+    <h1>🐉 Dragon Quest</h1>
+    <p>Become a legendary Dragon Rider!</p>
+  </header>
 
-  <script>
-    function dragonAttack() {
-      document.getElementById("message").textContent =
-        "🔥 Your dragon used Dragon Fire!";
-    }
-  </script>
+
+  <!-- =========================
+       PLAYER SECTION
+       ========================= -->
+
+  <main>
+
+    <section id="player-section">
+
+      <h2>🐉 Your Dragon</h2>
+
+      <p>
+        Dragon Name:
+        <span id="dragon-name">Blaze</span>
+      </p>
+
+      <p>
+        ❤️ HP:
+        <span id="dragon-hp">100</span>
+      </p>
+
+      <p>
+        ⭐ Level:
+        <span id="dragon-level">1</span>
+      </p>
+
+      <p>
+        ✨ XP:
+        <span id="dragon-xp">0</span>
+      </p>
+
+      <p>
+        🪙 Coins:
+        <span id="coins">0</span>
+      </p>
+
+    </section>
+
+
+    <!-- =========================
+         ENEMY SECTION
+         ========================= -->
+
+    <section id="enemy-section">
+
+      <h2>👹 Wild Monster</h2>
+
+      <p>
+        Monster:
+        <span id="monster-name">Shadow Beast</span>
+      </p>
+
+      <p>
+        ❤️ HP:
+        <span id="monster-hp">100</span>
+      </p>
+
+    </section>
+
+
+    <!-- =========================
+         BATTLE SECTION
+         ========================= -->
+
+    <section id="battle-section">
+
+      <h2>⚔️ Battle</h2>
+
+      <button id="attack-button">
+        🔥 Dragon Attack
+      </button>
+
+      <button id="defend-button">
+        🛡️ Defend
+      </button>
+
+      <button id="heal-button">
+        💚 Heal
+      </button>
+
+      <p id="battle-message">
+        A wild monster appeared!
+      </p>
+
+    </section>
+
+
+    <!-- =========================
+         EXPLORATION SECTION
+         ========================= -->
+
+    <section id="exploration-section">
+
+      <h2>🗺️ Exploration</h2>
+
+      <button id="explore-button">
+        🌲 Explore the Forest
+      </button>
+
+      <p id="exploration-message">
+        The forest is waiting...
+      </p>
+
+    </section>
+
+
+    <!-- =========================
+         DRAGON INFORMATION
+         ========================= -->
+
+    <section id="dragon-section">
+
+      <h2>🐲 Dragon Information</h2>
+
+      <p>
+        Dragon Type:
+        <span id="dragon-type">Fire</span>
+      </p>
+
+      <p>
+        Attack:
+        <span id="dragon-attack">20</span>
+      </p>
+
+      <p>
+        Defense:
+        <span id="dragon-defense">10</span>
+      </p>
+
+    </section>
+
+
+    <!-- =========================
+         INVENTORY
+         ========================= -->
+
+    <section id="inventory-section">
+
+      <h2>🎒 Inventory</h2>
+
+      <ul id="inventory">
+
+        <li>🍎 Health Potion × 1</li>
+
+      </ul>
+
+    </section>
+
+
+    <!-- =========================
+         GAME MESSAGE
+         ========================= -->
+
+    <section id="message-section">
+
+      <h2>📜 Game Message</h2>
+
+      <p id="game-message">
+        Your adventure begins...
+      </p>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       JAVASCRIPT
+       ========================= -->
+
+  <script src="game.js"></script>
+
 </body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Dragon Quest</title>
-</head>
 
-<body>
-  <h1>🐉 Dragon Quest</h1>
-  <p>Welcome, Dragon Rider!</p>
-
-  <h2>🐉 Your Dragon</h2>
-  <p>❤️ HP: <span id="dragonHP">100</span></p>
-
-  <h2>👹 Wild Monster</h2>
-  <p>❤️ HP: <span id="monsterHP">100</span></p>
-
-  <button onclick="dragonAttack()">🔥 Dragon Attack</button>
-
-  <p id="message">A wild monster appeared!</p>
-
-  <script>
-    let dragonHP = 100;
-    let monsterHP = 100;
-
-    function dragonAttack() {
-      monsterHP -= 20;
-
-      if (monsterHP <= 0) {
-        monsterHP = 0;
-        document.getElementById("message").textContent =
-          "🎉 You defeated the monster!";
-      } else {
-        document.getElementById("message").textContent =
-          "🔥 Your dragon attacked for 20 damage!";
-      }
-
-      document.getElementById("monsterHP").textContent = monsterHP;
-    }
-  </script>
-</body>
 </html>
